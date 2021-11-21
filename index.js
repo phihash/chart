@@ -1,17 +1,21 @@
 let myChart = document.getElementById("myChart").getContext('2d');
+let addLabelInput = document.getElementById("addLabel");
+let addNumberInput = document.getElementById("addNumber");
+let addButton = document.getElementById("addButton");
+const colors = ["red","green","yellow","blue","orange","brown","pink","purple"]
 
-let test = {
+let testChart = new Chart(myChart,{
   type:'bar',
   data:{
-    labels:["naniwa","aho","sasa","sasaa","sas111a"],
+    labels:["1","2","3","4","5"],
     datasets:[{
       label:'Name',
       data:[
-        12,
-        21,
-        31,
-        21,
-        30
+        1,
+        2,
+        3,
+        4,
+        5
       ],
       backgroundColor:[
         'rgba(255,63,24,0.6)',
@@ -32,6 +36,30 @@ let test = {
       position:'right'
     }
   }
-};
+});
 
-let hoge = new Chart(myChart,test);
+
+
+if(addLabelInput.value != "" && addNumberInput.value != ""){
+  
+}
+addLabelInput.addEventListener('keypress',(e) => {
+  if(e.key == 'Enter'){
+    if(addLabelInput.value != "" && addNumberInput.value != ""){
+      console.log(addLabelInput.value)
+    testChart.data.labels.push(addLabelInput.value);
+    testChart.data.datasets[0].data.push(addNumberInput.value);
+    testChart.data.datasets[0].backgroundColor.push(colors[0]);
+    testChart.update();
+    }
+  }
+});
+addButton.addEventListener('click',() => {
+  if(addLabelInput.value != "" && addNumberInput.value != ""){
+    console.log(addLabelInput.value)
+  testChart.data.labels.push(addLabelInput.value);
+  testChart.data.datasets[0].data.push(addNumberInput.value);
+  testChart.data.datasets[0].backgroundColor.push(colors[0]);
+  testChart.update();
+  }
+});

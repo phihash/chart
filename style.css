@@ -10,12 +10,17 @@ h1{
   margin: 0 auto;
 }
 
-#add{
+#addLabel,#addNumber,#addButton{
   display: block;
   height: 1.8rem;
-  width: 720px;
+  width: 700px;
   margin: 0 auto;
   border-radius: 3px;
+}
+
+#input{
+  display: block;
+  margin-bottom: 4rem;
 }
 
 @media (max-width:720px) {
@@ -24,7 +29,7 @@ h1{
     margin: 0 auto;
   }
 
-  #add{
+  #addLabel,#addNumber,#addButton{
     width: 400px;
   }
 
