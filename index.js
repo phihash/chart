@@ -11,7 +11,7 @@ let test = {
         21,
         31,
         21,
-        31
+        30
       ],
       backgroundColor:[
         'rgba(255,63,24,0.6)',
