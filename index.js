@@ -1,19 +1,28 @@
 let myChart = document.getElementById("myChart").getContext('2d');
 
-let hoge = new Chart(myChart,{
+let test = {
   type:'bar',
   data:{
-    labels:["naniwa","aho","sasa","sasaa"],
+    labels:["naniwa","aho","sasa","sasaa","sas111a"],
     datasets:[{
       label:'Name',
       data:[
         22,
         21,
         31,
-        21
+        21,
+        31
       ],
-      backgroundColor:'green'
+      backgroundColor:[
+        'rgba(255,63,24,0.6)',
+        'rgba(155,63,24,0.6)',
+        'rgba(55,61,44,0.6)',
+        'rgba(215,13,24,0.6)',
+        'rgba(20,63,24,0.6)'
+      ]
     }]
   },
   options:{}
-});
+};
+
+let hoge = new Chart(myChart,test);
