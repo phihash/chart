@@ -5,11 +5,11 @@ let addButton = document.getElementById("addButton");
 const colors = ["red","green","yellow","blue","orange","brown","pink","purple"]
 
 let testChart = new Chart(myChart,{
-  type:'bar',
+  type:'line',
   data:{
     labels:["1","2","3","4","5"],
     datasets:[{
-      label:'Name',
+      label:'テストチャート',
       data:[
         1,
         2,
@@ -35,6 +35,20 @@ let testChart = new Chart(myChart,{
     legend:{
       position:'right'
     }
+    // scales:{
+    //   xAxes:[
+    //     scaleLabel:{
+    //       display: true,
+    //       labelString: '月'
+    //     }
+    //   ],
+    //   yAxes:[
+    //     scaleLabel:{
+    //       display: true,
+    //       labelString: '月'
+    //     }
+    //   ]
+    // }
   }
 });
 
