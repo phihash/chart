@@ -7,7 +7,7 @@ let test = {
     datasets:[{
       label:'Name',
       data:[
-        22,
+        12,
         21,
         31,
         21,
@@ -22,7 +22,16 @@ let test = {
       ]
     }]
   },
-  options:{}
+  options:{
+    title:{
+      display:true,
+      text: 'Test',
+      fontSize:24
+    },
+    legend:{
+      position:'right'
+    }
+  }
 };
 
 let hoge = new Chart(myChart,test);
