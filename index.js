@@ -63,7 +63,7 @@ addLabelInput.addEventListener('keypress',(e) => {
       console.log(addLabelInput.value)
     testChart.data.labels.push(addLabelInput.value);
     testChart.data.datasets[0].data.push(addNumberInput.value);
-    testChart.data.datasets[0].backgroundColor.push(colors[0]);
+    testChart.data.datasets[0].backgroundColor.push(colors[Math.floor(Math.random() * colors.length)]);
     testChart.update();
     }
   }
@@ -73,7 +73,7 @@ addButton.addEventListener('click',() => {
     console.log(addLabelInput.value)
   testChart.data.labels.push(addLabelInput.value);
   testChart.data.datasets[0].data.push(addNumberInput.value);
-  testChart.data.datasets[0].backgroundColor.push(colors[0]);
+  testChart.data.datasets[0].backgroundColor.push(colors[Math.floor(Math.random() * colors.length)]);
   testChart.update();
   }
 });
